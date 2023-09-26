@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+   <children>
+      <VBox fx:id="vBox" layoutX="40.0" layoutY="149.0" prefHeight="350.0" prefWidth="260.0">
+         <children>
+            <GridPane fx:id="gridPane" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblId" text="ID" />
+                  <Label fx:id="lblName" text="Name" GridPane.rowIndex="1" />
+                  <Label fx:id="lblInv" text="Inv" GridPane.rowIndex="2" />
+                  <Label fx:id="lblPrice" text="Price" GridPane.rowIndex="3" />
+                  <Label fx:id="lblMax" text="Max" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtId" editable="false" maxWidth="123.0" prefHeight="26.0" prefWidth="123.0" promptText="Auto Gen- Disabled" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtName" maxWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtInv" maxWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtPrice" maxWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtMax" maxWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <TableView fx:id="tblView" layoutX="489.0" layoutY="77.0" prefHeight="213.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="tColId" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="tColName" prefWidth="85.0" text="Part Name" />
+            <TableColumn fx:id="tColInv" prefWidth="110.0" text="Inventory Level" />
+            <TableColumn fx:id="tColPrice" prefWidth="121.0" text="Price/Cost Per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblView2" layoutX="489.0" layoutY="348.0" prefHeight="225.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="tCol2Id" prefWidth="87.0" text="Part ID" />
+          <TableColumn fx:id="tCol2Name" prefWidth="85.0" text="Part Name" />
+            <TableColumn fx:id="tCol2Inv" prefWidth="103.0" text="Inventory Level" />
+            <TableColumn fx:id="tCol2Price" prefWidth="116.0" text="Price/Cost Per Unit" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddProduct" layoutX="801.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnAddProductOnAction" text="Add" />
+      <TextField fx:id="txtMin" layoutX="355.0" layoutY="302.0" maxWidth="100.0" />
+      <Label fx:id="lblMin" layoutX="316.0" layoutY="306.0" text="Min" />
+      <Button fx:id="btnRemoveProduct" layoutX="683.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnRemoveProductOnAction" prefHeight="26.0" prefWidth="165.0" text="Remove Assosiated Part" />
+      <Button fx:id="btnSaveProduct" layoutX="695.0" layoutY="619.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#btnSaveProductOnAction" prefHeight="26.0" prefWidth="56.0" text="Save" />
+      <Button fx:id="btnCancelProduct" layoutX="773.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnCancelProductOnAction" prefHeight="26.0" prefWidth="56.0" text="Cancel" />
+      <Label fx:id="lblAddProduct" layoutX="40.0" layoutY="77.0" prefHeight="41.0" prefWidth="148.0" text="Add Product">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtSearch" layoutX="721.0" layoutY="23.0" onAction="#txtSearchOnAction" promptText="Search by Part ID or Name" />
+   </children>
+</AnchorPane>
