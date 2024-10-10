@@ -1,3 +1,2 @@
-Application:
-Creating a GUI based scheduling desktop application
-I created an Inventory tracking desktop application using Java OOP and MVC principals, JavaFX and Scenebuilder. 
+Project name: Inventory tracker
+I created an Inventory tracking desktop application using Java OOP and MVC principals and JavaFX. I also used  Scenebuilder to create a GUI mock-up .In this app, I used a scenario where a small manifacturing company uses this app to track its inventory. The users can add, modify and delete parts from their inventory. They can also add, modify and delete products. They can search parts and products by name or ID number.
